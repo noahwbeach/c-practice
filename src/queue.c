@@ -11,7 +11,7 @@ void q_init(queue *q)
 
 void q_enqueue(queue *q, void *value)
 {
-    node *new_node;
+    node *new_node = malloc(sizeof(node));
     new_node->value = value;
 
     new_node->next = q->front;
