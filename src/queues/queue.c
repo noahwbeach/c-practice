@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../include/queue.h"
+#include "../../include/queue.h"
 
 void q_init(queue *q)
 {
@@ -53,13 +53,13 @@ void q_free(queue *q)
     }
 }
 
-int main() {
-    queue q;
-    q_init(&q);
+/* int main() { */
+/*     queue q; */
+/*     q_init(&q); */
 
-    if (q_empty(&q))
-        printf("Queue is empty");
+/*     if (q_empty(&q)) */
+/*         printf("Queue is empty"); */
 
-    q_free(&q);
-    return 0;
-}
+/*     q_free(&q); */
+/*     return 0; */
+/* } */
