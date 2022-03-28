@@ -1,7 +1,6 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-/// Doubly linked
 typedef struct node {
     void *value;
     struct node *next;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../include/linked-list.h"
+#include "linked-list.h"
 
 void l_init(llist *list)
 {
