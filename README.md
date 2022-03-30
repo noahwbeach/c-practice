@@ -12,4 +12,4 @@ in root then call
 crun
 ```
 
-in the directory you want to build
+in the directory you want to build and run
