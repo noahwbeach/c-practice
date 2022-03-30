@@ -16,16 +16,14 @@ void q_enqueue(queue *q, int value)
 
     if (q->front == NULL) {
         q->rear = new_node;
+        new_node->next = NULL;
     } else {
         q->front->prev = new_node;
+        new_node->next = q->front;
     }
-        
-    new_node->next = q->front;
+
     new_node->prev = NULL;
     q->front = new_node;
-
-    if (q->rear == NULL)
-        q->rear = new_node;
 }
 
 
@@ -38,6 +36,18 @@ int q_dequeue(queue *q)
 
     int value = q->rear->value;
 
+    if (q->front == q->rear) {
+        free(q->rear);
+        q->front = NULL;
+        q->rear = NULL;
+        return value;
+    }
+
+    node *tmp = q->rear;
+    q->rear->prev->next = NULL;
+    q->rear = q->rear->prev;
+
+    free(tmp);
     return value;
 }
 

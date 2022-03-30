@@ -7,13 +7,17 @@ int main() {
     queue q;
     q_init(&q);
 
+    q_enqueue(&q, 1);
     q_enqueue(&q, 2);
+    q_enqueue(&q, 3);
+    q_enqueue(&q, 4);
+    q_enqueue(&q, 5);
 
-    if (q_empty(&q)) {
-        printf("Queue is empty");
-    } else {
-        printf("Queue has at least one entry\n");
-    }
+    printf("dequeue: %i\n", q_dequeue(&q));
+    printf("dequeue: %i\n", q_dequeue(&q));
+    printf("dequeue: %i\n", q_dequeue(&q));
+    printf("dequeue: %i\n", q_dequeue(&q));
+    printf("dequeue: %i\n", q_dequeue(&q));
 
     q_free(&q);
     return 0;
