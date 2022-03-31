@@ -13,3 +13,5 @@ crun
 ```
 
 in the directory you want to build and run
+
+_I know this is hacky and dumb... it just makes more sense for me_
