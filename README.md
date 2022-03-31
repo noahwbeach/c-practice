@@ -9,7 +9,7 @@ source build.sh
 in root then call 
 
 ```bash
-crun
+run
 ```
 
 in the directory you want to build and run
